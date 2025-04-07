@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <form id="login-form" class="login-form">
+            <h1>Student Login</h1>
+            <input type="text" id="username" placeholder="Username or Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <div id="error-message" class="error-message"></div>
+        </form>
+
+        <!-- Profile Container -->
+        <div id="profile-container" class="profile-container">
+            <div class="profile-header">
+                <h2 id="student-name">Student Profile</h2>
+                <div class="personal-info">
+                    <p><strong>ID:</strong> <span id="user-id"></span></p>
+                    <p><strong>Campus:</strong> <span id="user-campus"></span></p>
+                    <p><strong>Member Since:</strong> <span id="join-date"></span></p>
+                </div>
+                <div class="stats">
+                    <div class="stat-box">
+                        <h3>Total XP</h3>
+                        <p id="user-xp">0 KB</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Audit Ratio</h3>
+                        <p id="audit-ratio">0.00</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Success Rate</h3>
+                        <p id="success-rate">0%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="chart-container">
+                    <h3>XP Progress (KB)</h3>
+                    <svg id="xp-chart" width="100%" height="300"></svg>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Project Outcomes</h3>
+                    <svg id="project-chart" width="100%" height="300"></svg>
+                </div>
+            </div>
+
+            <button id="logout">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
